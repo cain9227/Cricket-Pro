@@ -8,4 +8,8 @@ function fit() {
 addEventListener('resize', fit);
 fit();
 
-game.textContent = 'Cricket Game';
+// Two test screens
+Screens.add('splash', '<div onclick="Screens.show(\'menu\')">Tap to start</div>');
+Screens.add('menu', '<div onclick="Screens.show(\'splash\')">Main Menu</div>');
+
+Screens.show('splash');
